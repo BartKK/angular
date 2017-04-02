@@ -1,14 +1,13 @@
-// Looping with ngRepeat
 var countryApp = angular.module('countryApp', ['ngRoute']);
 
 countryApp.config(['$routeProvider', function ($routeProvider){
 $routeProvider.
   when('/', {
-    template: '<ul><li ng-repeat="country in countries">{{ country.name }}</li></ul>',
+    templateUrl: 'country-list.html',
     controller: 'CountryListCtrl'
   })
   .when('/:countryName', {
-    template: 'wait',
+    templateUrl: 'country-detail.html',
     controller: 'CountryDetailCtrl'
   })
   .otherwise({
@@ -25,6 +24,6 @@ $http.get('countries.json').success(function (data) {
 }]);
 
 
-countryApp.controller('CountryDetailCtrl', ['$scope','$routeProvider', function ($scope, $routeProvider){
-  console.log($routeProvider);
+countryApp.controller('CountryDetailCtrl', ['$scope','$routeParams', function ($scope, $routeParams){
+  $scope.name = $routeParams.countryName;
 }]);
