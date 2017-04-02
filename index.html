@@ -11,11 +11,19 @@
 
 </head>
 
-<body ng-controller="myAppController">
-<ul>
-  <li ng-repeat="country in countries">{{ country.name }} - {{ country.population }}</li>
-</ul>
+<body ng-controller="myAppCtrl">
 
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Population</th>
+        </tr>
+        <tr ng-repeat="country in countries">
+            <td>{{ country.name }}</td>
+            <td>{{ country.population }}</td>
+        </tr>
+
+    </table>
 </body>
 
 </html>
