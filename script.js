@@ -3,14 +3,12 @@ var myApp = angular.module('myApp', []);
 
 
 myApp.controller('myAppController', ['$scope', function myAppController($scope){
-  $scope.names = ['Asia', 'Kasia', 'Zosia'];
+$scope.countries = [
+    {name: 'China', population: 13000000},
+    {name: 'India', population: 198234672},
+    {name: 'United States', population: 248091893},
 
-  $scope.addName= function () {
-    $scope.names.push($scope.inputName)
-  }
 
-  $scope.removeName = function (nameText) {
-    var i = $scope.names.indexOf(nameText);
-    $scope.names.splice(i, 1);
-  }
+
+]
 }]);
