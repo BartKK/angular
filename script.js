@@ -34,6 +34,24 @@ countryApp.factory('countries', ['$http', function($http) {
     };
 }]);
 
+countryApp.directive('country', function() {
+  return {
+    // A - <div moja-dyrektywa></div>
+    // E - <moja-dyrektywa></moja-dyrektywa>
+    // C - <div class="{ moja-dyrektywa: parametr }"
+
+    restrict: 'A',
+    scope: {
+      // '='  Two way data binding
+      // <    One way data binding
+      country: '='
+    },
+    templateUrl: 'country.html'
+  }
+});
+
+
+
 countryApp.controller('CountryListCtrl', ['$scope', '$http', 'countries',
     function($scope, countries) {
         countries.list(function (countries) {
