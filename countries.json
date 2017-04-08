@@ -1,25 +1,18 @@
 [
   {
     "name": "China",
-    "population": 1235324454,
-    "flag": "//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/255px-Flag_of_the_People%27s_Republic_of_China.svg.png",
-    "capital": "Beijing",
-    "gdp": 13000
+    "id": 1
   },
   {
     "name": "India",
-    "population": 12312452152,
-    "flag": "//upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/255px-Flag_of_India.svg.png",
-    "capital": "New Delhi",
-    "gdp": 8000
-
+    "id": 2
   },
   {
     "name": "United States",
-    "population": 34361346324442,
-    "flag": "//upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/300px-Flag_of_the_United_States.svg.png",
-    "capital": "Washington",
-    "gdp": 14000
-
+    "id": 3
+  },
+  {
+    "name": "Republika Radziecka",
+    "id": 4
   }
 ]
